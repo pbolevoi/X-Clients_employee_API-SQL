@@ -49,7 +49,7 @@ class EmloyeeServise:
         return resp.json()
 
     @allure.step('Создание сотрудника где firstName={firstName}, lastName={lastName}, companyId={companyId}, email={email}, phone={phone}, isActive={isActive}')
-    def creat_new_emloyees(self, firstName: str, lastName: str, companyId: int, email: str, phone: str, middleName: str = None, birthdate: str = None, isActive: bool = None) -> int:
+    def create_new_emloyees(self, firstName: str, lastName: str, companyId: int, email: str, phone: str, middleName: str = None, birthdate: str = None, isActive: bool = None) -> int:
         headers = {
             'x-client-token': self.get_token_auth()
         }
